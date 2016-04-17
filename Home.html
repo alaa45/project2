@@ -1,0 +1,305 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="jquery.js"></script>
+<script>
+function myFunction()
+{
+
+var x=document.getElementById("f").value;
+var x1=document.getElementById("s").value;
+var x2=document.getElementById("r1").value;
+var x3=document.getElementById("r2").value;
+var x4=document.getElementById("e").value;
+var x5=document.getElementById("p").value;
+var x6=document.getElementById("pp").value;
+
+var atpos=x4.indexOf("@");
+var dotpos=x4.lastIndexOf(".");
+//var z=p.length;
+	
+if (x==null || x=="" ||x1==null || x1=="" ||x2==null || x2==""||x3==null || x3==""||x4==null || x4==""||x5==null || x5==""||x6==null || x6=="")
+
+	{
+
+	alert("data must be filled out");
+
+	return false;
+
+	}
+else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x4.length)
+
+	{
+
+	alert("Not a valid e-mail address");
+
+	return false;
+
+	}
+else if(x5!=x6 )
+	{
+
+	alert("Password does not match!!! Please give correct password");
+
+	return false;
+	}
+}
+
+function asd()
+{
+
+var y=document.getElementById("t").value;
+var y1=document.getElementById("b").value;
+
+var atpos=y.indexOf("@");
+var dotpos=y.lastIndexOf(".");
+//var z=p.length;
+	
+if (y==null || y=="" ||y1==null || y1=="" )
+
+	{
+
+	alert("data must be filled out");
+
+	return false;
+
+	}
+else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=y.length)
+
+	{
+
+	alert("Not a valid e-mail address");
+
+	return false;
+
+	}
+}
+
+function asd1()
+{
+
+var y=document.getElementById("n").value;
+var y1=document.getElementById("m").value;
+var y2=document.getElementById("text").value;
+
+var atpos=y.indexOf("@");
+var dotpos=y.lastIndexOf(".");
+//var z=p.length;
+	
+if (y==null || y=="" ||y1==null || y1=="" ||y2==null || y2=="")
+
+	{
+
+	alert("data must be filled out");
+
+	return false;
+
+	}
+else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=m.length)
+
+	{
+
+	alert("Not a valid e-mail address");
+
+	return false;
+
+	}
+}
+</script>
+<script> 
+$(document).ready(function(){
+    $("#h").click(function(){
+        $("#first").slideToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $("#h1").click(function(){
+        $("#d1").slideToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $("#h2").click(function(){
+        $("#d2").slideToggle("slow");
+    });
+});
+$(document).ready(function(){
+    $("#h3").click(function(){
+        $("#d3").slideToggle("slow");
+    });
+});
+</script>
+<style>
+#first,#d1,#d2,#d3
+{
+ display:none;
+}
+#h 
+ {
+     padding: 5px;
+    text-align: center;
+   background-color:#1B2529;
+    color:white;
+}
+#h1
+ {
+    background-color:#1B2529;
+    color:white;
+    padding:5px;
+    margin-top:15px;
+}
+#h2
+ {
+    background-color:#1B2529;
+    color:white;
+     margin-top:15px;
+    padding:5px;
+}
+#h3
+ {
+    background-color:#1B2529;
+    color:white;
+     margin-top:15px;
+    padding:5px;
+}
+a
+{
+ color:C4A389;
+}
+
+ a:hover 
+{
+    color: #799D6C;
+background-color:transparent; 
+  
+   }
+a:link
+{
+text-decoration: none;
+background-color:transparent;
+}
+
+</style>
+
+</head>
+<body bgcolor="#242C31" >
+<div id="i"  >
+
+<img src="img/12804502_1052090184855738_1644323013_n.jpg" style="margin-left:-50;margin-top:-20;width:1342px;height:250px">
+</div>
+ 
+<div id="h"  align="center">
+<h1>Registration</h1>
+</div>
+<div id="first">
+<form action="" method="post" onsubmit="myFunction()">
+<table class="table" align ="center"  cellpadding="3"cellspacing="3">
+<caption align="top"> <h2 style="color:#7AA637">Resitration </h2></caption>
+<tr><td colspan="1">First Name</td> <td colspan="3"><input type ="text" id="f" name="fname" ></td></tr>
+<tr><td colspan="1">Second Name</td> <td colspan="3"><input type ="text" id="s" name="lname"></td></tr>
+<tr> <td colspan="1">Gender:</td>
+<td colspan="1" rowspan="1" ><input type="radio" name="group1" value="Milk" id="r1">
+Male
+<br>
+<input type="radio" name="group1" value="Butter" id="r2">
+Female
+
+ </td></tr>
+<tr><td colspan="1">Email:</td> <td colspan="3"><input type ="text"  id="e" name="email"></td></tr>
+<tr><td colspan="1">Password:</td> <td colspan="3"><input type ="password" id="p" name="pass"></td></tr>
+<tr><td colspan="1">Reenter Password:</td> <td colspan="3"><input type ="password" id="pp" ></td></tr>
+<tr> 
+<td colspan="1" rowspan="1" >
+
+<input type="submit" value="register">
+
+ </td>
+<td colspan="1" rowspan="1" >
+
+<input type="reset" value="reset">
+
+ </td></tr>
+
+
+</table>
+</form>
+</div>
+<div id="h1"  align="center" >
+<h1>Log in</a>
+</div>
+<div id="d1"  align="center">
+
+<h2 style="color:#7AA637">Log In</h2>
+<br>
+
+<h5 style="color:white">
+<form action="" method="post" onsubmit="asd()">
+Email :
+<input type="text" id="t">
+<br>
+password:
+<input type="password" id="b">
+<br>
+
+<input type="submit" value="Log in">
+
+</form>
+
+</h5>
+</div>
+<div id="h2"  align="center">
+<h1>Contact</h1>
+</div>
+<div id="d2" align="center">
+<h2 style="color:#7AA637">Mail us</h2>
+<br>
+
+<h5 style="color:white">
+<form action="" method="post" onsubmit="asd1()">
+Name:
+<br>
+<input type="text" id="n">
+<br>
+Email:
+<br>
+<input type="text" id="m">
+<br>
+Message:
+<br>
+<textarea  rows="8" cols="20" id="text"></textarea>
+<br>
+<input type="submit" value="Send">
+
+</form>
+
+</h5>
+</div>
+
+<div id="h3"  align="center">
+<h1>About Us</h1>
+</div>
+<div id="d3">
+<center><h2 style="color:#7AA637">About Us</h2></center>
+<br>
+<br>
+<pre>
+<center><h2 style="color:white">
+
+We are good web designer.We took some courses like database,network,web devolpment.
+<br>
+
+If you want any help from us contact to us from our website,and do this if you want from us to do website  for you.
+<h1 style="color:#7AA637">OUR NAMES:</h1>
+<h2 style="color:white">Alaa Hashem</h2><br>
+<h2 style="color:white">Esraa Osama</h2><br>
+<h2 style="color:white">Marwa Ahmed</h2><br>
+<h2 style="color:white">Noha Adly</h2><br>
+<h2 style="color:white">Hasnaa Badawy</h2><br>
+
+
+</h2></center>
+</pre> 
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
